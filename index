@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的第一個網站</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* 淺藍背景 */
+            font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #1e90ff;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #1e90ff, #4682b4);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #4682b4, #1e90ff);
+            transform: scale(1.05);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 我的第一個網站</h1>
+    <p>這是使用 GitHub Pages 製作的網站，呈現在 Kogula App 裡。</p>
+    <button class="btn" onclick="alert('感謝你的點擊！')">點我一下 😊</button>
+
+    <footer>
+        &copy; 2025 你的名字 | Powered by GitHub Pages
+    </footer>
+</body>
+</html>
