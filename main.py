@@ -9,7 +9,7 @@ LATITUDE = 25.0330
 LONGITUDE = 121.5654
 
 # 降雨機率門檻
-THRESHOLD = 60
+THRESHOLD = 30
 
 
 # =========================
