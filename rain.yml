@@ -1,0 +1,40 @@
+name: Rain Alert
+
+on:
+  schedule:
+    # 每天台灣時間早上 7:00 執行
+    - cron: "0 23 * * *"
+
+  # 允許手動執行
+  workflow_dispatch:
+
+jobs:
+
+  check-weather:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # 下載 GitHub Repository
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 安裝 Python
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 安裝套件
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      # 執行 Python
+      - name: Check weather
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+        run: python main.py
